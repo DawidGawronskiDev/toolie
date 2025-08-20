@@ -142,3 +142,9 @@
     @apply text-base text-muted-foreground;
   }
 }
+
+@layer utilities {
+  .container {
+    @apply max-w-6xl mx-auto px-4;
+  }
+}
