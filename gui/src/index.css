@@ -3,7 +3,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("./assets/fonts/inter/Inter-Italic-VariableFont_opsz\,wght.ttf");
+  src: url("./assets/fonts/inter/Inter-VariableFont_opsz,wght.ttf")
+    format("truetype");
 }
 
 @custom-variant dark (&:is(.dark *));
