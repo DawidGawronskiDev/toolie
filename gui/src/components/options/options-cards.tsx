@@ -1,4 +1,4 @@
-import { OptionsCard } from "@/components/options-card";
+import { OptionsCard } from "@/components/options/options-card";
 import type { Option } from "@/types";
 
 const OptionsCards = ({ options }: { options: Option[] }) => {

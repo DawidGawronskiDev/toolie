@@ -1,6 +1,6 @@
 import { Description } from "./components/description";
 import { Header } from "./components/header";
-import { Options } from "./components/options";
+import { Options } from "./components/options/options";
 
 function App() {
   return (

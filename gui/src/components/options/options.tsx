@@ -1,8 +1,8 @@
-import { OptionsToggle } from "@/components/options-toggle";
-import { OptionsCards } from "@/components/options-cards";
+import { OptionsToggle } from "@/components/options/options-toggle";
+import { OptionsCards } from "@/components/options/options-cards";
+import { OptionsTable } from "@/components/options/options-table";
 import { options } from "@/config";
 import { useState } from "react";
-import { OptionsTable } from "./options-table";
 
 type OptionsMode = "grid" | "table";
 
