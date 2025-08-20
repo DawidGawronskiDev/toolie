@@ -1,5 +1,11 @@
 import type { Option } from "@/types";
-import { CircleFadingArrowUp, HardDrive, KeyRound, Wifi } from "lucide-react";
+import {
+  CircleFadingArrowUp,
+  HardDrive,
+  KeyRound,
+  PowerOff,
+  Wifi,
+} from "lucide-react";
 
 export const options: Option[] = [
   {
@@ -40,6 +46,14 @@ export const options: Option[] = [
     action: {
       icon: KeyRound,
       label: "Inject Now",
+    },
+  },
+  {
+    title: "Shutdown Windows",
+    description: "Shut down your Windows 11 Pro.",
+    action: {
+      icon: PowerOff,
+      label: "Shutdown Now",
     },
   },
 ];
