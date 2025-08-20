@@ -8,22 +8,27 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
+import { useMobile } from "@/hooks/useMobile";
 
 const OptionsTable = ({ options }: { options: Option[] }) => {
+  const { isMobile } = useMobile();
+
   return (
     <Table>
       <TableHeader className="*:font-bold *:last:text-right">
         <TableHead>Title</TableHead>
-        <TableHead>Description</TableHead>
+        {!isMobile && <TableHead>Description</TableHead>}
         <TableHead>Action</TableHead>
       </TableHeader>
       <TableBody>
         {options.map((option, index) => (
-          <TableRow key={index} className=" *:last:text-right">
+          <TableRow key={index} className="*:last:text-right">
             <TableCell className="font-bold">{option.title}</TableCell>
-            <TableCell className="text-muted-foreground">
-              {option.description}
-            </TableCell>
+            {!isMobile && (
+              <TableCell className="text-muted-foreground">
+                {option.description}
+              </TableCell>
+            )}
             <TableCell>
               <Button variant="outline" size="icon">
                 <option.action.icon />
