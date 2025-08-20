@@ -1,4 +1,4 @@
-import { HardDrive } from "lucide-react";
+import { options } from "@/config";
 import { Button } from "./ui/button";
 import {
   Card,
@@ -8,18 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-
-const options = [
-  {
-    title: "Install Drivers",
-    description:
-      "To ensure proper functionality, please install the necessary drivers.",
-    action: {
-      icon: HardDrive,
-      label: "Install Drivers",
-    },
-  },
-];
 
 const Options = () => {
   return (
