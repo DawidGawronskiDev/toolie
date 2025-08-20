@@ -22,7 +22,11 @@ const OptionsTable = ({ options }: { options: Option[] }) => {
       </TableHeader>
       <TableBody>
         {options.map((option, index) => (
-          <TableRow key={index} className="*:last:text-right">
+          <TableRow
+            key={index}
+            style={{ animationDelay: `${index * 50}ms` }}
+            className="*:last:text-right opacity-0 animate-appear"
+          >
             <TableCell className="font-bold">{option.title}</TableCell>
             {!isMobile && (
               <TableCell className="text-muted-foreground">
