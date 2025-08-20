@@ -1,10 +1,14 @@
+import { Header } from "./components/header";
 import { Options } from "./components/options";
 
 function App() {
   return (
-    <main className="container mx-auto">
-      <Options />
-    </main>
+    <>
+      <Header />
+      <main className="container mx-auto">
+        <Options />
+      </main>
+    </>
   );
 }
 
