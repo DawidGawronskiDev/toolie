@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="max-w-6xl container mx-auto space-y-8">
+      <main className="container space-y-8">
         <Description />
         <Options />
       </main>
