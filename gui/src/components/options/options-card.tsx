@@ -25,7 +25,7 @@ const OptionsCard = ({
       </CardHeader>
       <CardContent>
         <CardAction className="place-self-end">
-          <Button>
+          <Button onClick={option.action.onClick}>
             <option.action.icon /> {option.action.label}
           </Button>
         </CardAction>

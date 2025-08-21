@@ -2,7 +2,8 @@ import { Description } from "@/components/description";
 import { Header } from "@/components/header/header";
 import { Options } from "@/components/options/options";
 import { ThemeProvider } from "@/components/theme-provider";
-import StarsBackground from "./components/StarsBackground";
+import StarsBackground from "@/components/StarsBackground";
+import { Toaster } from "@/components/ui/sonner";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Description />
         <Options />
       </main>
+      <Toaster />
     </ThemeProvider>
   );
 }

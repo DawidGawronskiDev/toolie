@@ -1,4 +1,4 @@
-import type { Option } from "@/types";
+import type { Option, PyWebView } from "@/types";
 import {
   CircleFadingArrowUp,
   HardDrive,
@@ -7,6 +7,9 @@ import {
   PowerOff,
   Wifi,
 } from "lucide-react";
+import { toast } from "sonner";
+
+declare const pywebview: PyWebView;
 
 export const options: Option[] = [
   {
@@ -63,6 +66,21 @@ export const options: Option[] = [
     action: {
       icon: History,
       label: "Get Model",
+      onClick: async () => {
+        try {
+          const res = await pywebview.api.get_device_model();
+          console.log(res);
+
+          if (res.success) {
+            toast.success(`Device model: ${res.data?.model}`);
+          } else {
+            toast.error(`Error: ${res.error}`);
+          }
+        } catch (error) {
+          console.error("Error calling get_device_model:", error);
+          toast.error(`Error: ${error}`);
+        }
+      },
     },
   },
 ];

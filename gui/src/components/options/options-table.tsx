@@ -34,7 +34,11 @@ const OptionsTable = ({ options }: { options: Option[] }) => {
               </TableCell>
             )}
             <TableCell>
-              <Button variant="outline" size="icon">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={option.action.onClick}
+              >
                 <option.action.icon />
               </Button>
             </TableCell>
