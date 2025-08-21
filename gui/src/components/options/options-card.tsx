@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import type { HTMLAttributes } from "react";
+import { Badge } from "../ui/badge";
 
 const OptionsCard = ({
   option,
@@ -20,6 +21,10 @@ const OptionsCard = ({
       {...props}
     >
       <CardHeader>
+        <Badge variant="secondary">
+          <option.category.icon />
+          {option.category.label}
+        </Badge>
         <CardTitle>{option.title}</CardTitle>
         <CardDescription>{option.description}</CardDescription>
       </CardHeader>

@@ -9,6 +9,10 @@ type OptionsMode = "grid" | "table";
 const Options = () => {
   const [mode, setMode] = useState<OptionsMode>("table");
 
+  const sortedOptions = options.sort((a, b) =>
+    a.category.label.localeCompare(b.category.label)
+  );
+
   const toggleMode = () => {
     setMode((prev) => (prev === "grid" ? "table" : "grid"));
   };
@@ -20,9 +24,9 @@ const Options = () => {
         <OptionsToggle onClick={toggleMode} />
       </div>
       {mode === "grid" ? (
-        <OptionsCards options={options} />
+        <OptionsCards options={sortedOptions} />
       ) : (
-        <OptionsTable options={options} />
+        <OptionsTable options={sortedOptions} />
       )}
     </div>
   );

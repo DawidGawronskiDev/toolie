@@ -1,6 +1,13 @@
 import { connectToInternet, getModel } from "@/lib/option-actions";
 import type { Option } from "@/types";
 import {
+  IconBrandWindows,
+  IconKey,
+  IconSettings,
+  IconSitemap,
+  IconWifi,
+} from "@tabler/icons-react";
+import {
   CircleFadingArrowUp,
   HardDrive,
   History,
@@ -13,6 +20,10 @@ export const options: Option[] = [
   {
     title: "Install Drivers",
     description: "Install drivers and ensure proper functionality.",
+    category: {
+      label: "Drivers",
+      icon: IconSettings,
+    },
     action: {
       icon: HardDrive,
       label: "Install Drivers",
@@ -21,6 +32,10 @@ export const options: Option[] = [
   {
     title: "Install Local Drivers",
     description: "Install drivers located on your pendrive.",
+    category: {
+      label: "Drivers",
+      icon: IconSettings,
+    },
     action: {
       icon: Wifi,
       label: "Install Local Drivers",
@@ -29,6 +44,10 @@ export const options: Option[] = [
   {
     title: "Connect to Internet",
     description: "Get access to the internet.",
+    category: {
+      label: "Network",
+      icon: IconWifi,
+    },
     action: {
       icon: Wifi,
       label: "Connect to Internet",
@@ -38,6 +57,10 @@ export const options: Option[] = [
   {
     title: "Upgrade to Windows 11 Pro",
     description: "Unlock advanced features and capabilities.",
+    category: {
+      label: "Windows",
+      icon: IconBrandWindows,
+    },
     action: {
       icon: CircleFadingArrowUp,
       label: "Upgrade Now",
@@ -46,6 +69,10 @@ export const options: Option[] = [
   {
     title: "Activate Windows 11 Pro",
     description: "Activate your copy of Windows 11 Pro.",
+    category: {
+      label: "Windows",
+      icon: IconBrandWindows,
+    },
     action: {
       icon: CircleFadingArrowUp,
       label: "Activate Now",
@@ -54,6 +81,10 @@ export const options: Option[] = [
   {
     title: "Inject Office Key",
     description: "Inject your Office product key.",
+    category: {
+      label: "Licenses",
+      icon: IconKey,
+    },
     action: {
       icon: KeyRound,
       label: "Inject Now",
@@ -62,6 +93,10 @@ export const options: Option[] = [
   {
     title: "Shutdown Windows",
     description: "Shut down your Windows 11 Pro.",
+    category: {
+      label: "Windows",
+      icon: IconBrandWindows,
+    },
     action: {
       icon: PowerOff,
       label: "Shutdown Now",
@@ -70,6 +105,10 @@ export const options: Option[] = [
   {
     title: "Get Model",
     description: "Get the model of your device.",
+    category: {
+      label: "System",
+      icon: IconSitemap,
+    },
     action: {
       icon: History,
       label: "Get Model",
