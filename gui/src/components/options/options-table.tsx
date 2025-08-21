@@ -18,7 +18,7 @@ const OptionsTable = ({ options }: { options: Option[] }) => {
     <Table className="bg-background/0 backdrop-blur-xs">
       <TableHeader className="*:font-bold *:last:text-right">
         <TableHead>Title</TableHead>
-        <TableHead className="hidden sm:block">Category</TableHead>
+        {!isMobile && <TableHead>Category</TableHead>}
         {!isMobile && <TableHead>Description</TableHead>}
         <TableHead>Action</TableHead>
       </TableHeader>
@@ -30,12 +30,14 @@ const OptionsTable = ({ options }: { options: Option[] }) => {
             className="*:last:text-right opacity-0 animate-appear"
           >
             <TableCell className="font-bold">{option.title}</TableCell>
-            <TableCell className="hidden sm:block">
-              <Badge variant="secondary">
-                <option.category.icon />
-                {option.category.label}
-              </Badge>
-            </TableCell>
+            {!isMobile && (
+              <TableCell>
+                <Badge variant="secondary">
+                  <option.category.icon />
+                  {option.category.label}
+                </Badge>
+              </TableCell>
+            )}
             {!isMobile && (
               <TableCell className="text-muted-foreground">
                 {option.description}
