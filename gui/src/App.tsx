@@ -1,7 +1,7 @@
 import { Description } from "@/components/description";
 import { Header } from "@/components/header/header";
 import { Options } from "@/components/options/options";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/cta/theme-provider";
 import StarsBackground from "@/components/StarsBackground";
 import { Toaster } from "@/components/ui/sonner";
 

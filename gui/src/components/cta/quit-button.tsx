@@ -1,5 +1,5 @@
 import { Power } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { useMobile } from "@/hooks/useMobile";
 import type { PyWebView } from "@/types";
 

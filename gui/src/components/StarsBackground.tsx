@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { useTheme } from "@/components/theme-provider";
+import { useTheme } from "@/components/cta/theme-provider";
 
 const STAR_COUNT = 120;
 const LIGHT_STAR_COLOR = "rgba(0,0,0,0.5)";

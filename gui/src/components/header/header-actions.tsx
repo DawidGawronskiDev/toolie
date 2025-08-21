@@ -1,6 +1,6 @@
-import { ModeToggle } from "@/components/mode-toggle";
-import { QuitButton } from "@/components/quit-button";
-import { SettingsButton } from "@/components/settings-button";
+import { ModeToggle } from "@/components/cta/mode-toggle";
+import { QuitButton } from "@/components/cta/quit-button";
+import { SettingsButton } from "@/components/cta/settings-button";
 
 const HeaderActions = () => {
   return (
