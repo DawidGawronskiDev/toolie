@@ -26,6 +26,21 @@ export const options: Option[] = [
     action: {
       icon: Wifi,
       label: "Connect to Internet",
+      onClick: async () => {
+        try {
+          const res = await pywebview.api.connect_to_internet();
+          console.log(res);
+
+          if (res.success) {
+            toast.success(res.message);
+          } else {
+            toast.error(`Error: ${res.error}`);
+          }
+        } catch (error) {
+          console.error("Error calling connect_to_internet:", error);
+          toast.error(`Error: ${error}`);
+        }
+      },
     },
   },
   {

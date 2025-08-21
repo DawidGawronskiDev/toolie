@@ -8,6 +8,11 @@ export type PyWebView = {
       };
       error?: string;
     }>;
+    connect_to_internet: () => Promise<{
+      success: boolean;
+      message?: string;
+      error?: string;
+    }>;
   };
 };
 
