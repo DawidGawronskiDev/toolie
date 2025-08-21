@@ -1,14 +1,11 @@
-import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Power } from "lucide-react";
+import { QuitButton } from "../quit-button";
 
 const HeaderActions = () => {
   return (
     <div className="space-x-2">
       <ModeToggle />
-      <Button>
-        <Power /> Quit
-      </Button>
+      <QuitButton />
     </div>
   );
 };
