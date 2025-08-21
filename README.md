@@ -13,7 +13,21 @@ A comprehensive Windows system management tool that provides automated driver in
 
 ## Screenshots
 
-_Coming soon..._
+### Dark Theme
+
+![Dark Theme - Grid View](screenshots/main-menu-dark-theme-grid.jpg)
+_Grid View_
+
+![Dark Theme - Table View](screenshots/main-menu-dark-theme-table.jpg)
+_Table View_
+
+### Light Theme
+
+![Light Theme - Grid View](screenshots/main-menu-light-theme-grid.jpg)
+_Grid View_
+
+![Light Theme - Table View](screenshots/main-menu-light-theme-table.jpg)
+_Table View_
 
 ## Installation
 
@@ -134,16 +148,11 @@ The application uses `config/settings.json` for configuration:
 ```json
 {
   "internet": {
-    "ssid": "Your-WiFi-Name",
-    "password": "Your-WiFi-Password"
-  },
-  "ui": {
-    "theme": "dark",
-    "notifications": "toast"
+    "ssid": "<SSID>",
+    "password": "<PASSWORD>"
   },
   "drivers": {
-    "silent_install": true,
-    "auto_detect": true
+    "remote_drivers_path": "<REMOTE_DRIVERS_PATH>"
   }
 }
 ```
@@ -195,14 +204,6 @@ If you encounter any issues or have questions:
 
 - Create an [issue](https://github.com/DawidGawronskiDev/toolie/issues)
 - Check existing [discussions](https://github.com/DawidGawronskiDev/toolie/discussions)
-
-## Roadmap
-
-- [ ] Multi-language support
-- [ ] Plugin system for custom tools
-- [ ] Remote management capabilities
-- [ ] Automatic update system
-- [ ] Enhanced driver detection
 
 ---
 
