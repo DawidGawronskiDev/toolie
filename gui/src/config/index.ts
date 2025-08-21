@@ -70,8 +70,8 @@ export const options: Option[] = [
     title: "Activate Windows 11 Pro",
     description: "Activate your copy of Windows 11 Pro.",
     category: {
-      label: "Windows",
-      icon: IconBrandWindows,
+      label: "Licenses",
+      icon: IconKey,
     },
     action: {
       icon: CircleFadingArrowUp,
