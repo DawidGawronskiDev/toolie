@@ -1,4 +1,5 @@
-import type { Option, PyWebView } from "@/types";
+import { connectToInternet, getModel } from "@/lib/option-actions";
+import type { Option } from "@/types";
 import {
   CircleFadingArrowUp,
   HardDrive,
@@ -7,9 +8,6 @@ import {
   PowerOff,
   Wifi,
 } from "lucide-react";
-import { toast } from "sonner";
-
-declare const pywebview: PyWebView;
 
 export const options: Option[] = [
   {
@@ -26,21 +24,7 @@ export const options: Option[] = [
     action: {
       icon: Wifi,
       label: "Connect to Internet",
-      onClick: async () => {
-        try {
-          const res = await pywebview.api.connect_to_internet();
-          console.log(res);
-
-          if (res.success) {
-            toast.success(res.message);
-          } else {
-            toast.error(`Error: ${res.error}`);
-          }
-        } catch (error) {
-          console.error("Error calling connect_to_internet:", error);
-          toast.error(`Error: ${error}`);
-        }
-      },
+      onClick: () => connectToInternet(),
     },
   },
   {
@@ -81,21 +65,7 @@ export const options: Option[] = [
     action: {
       icon: History,
       label: "Get Model",
-      onClick: async () => {
-        try {
-          const res = await pywebview.api.get_device_model();
-          console.log(res);
-
-          if (res.success) {
-            toast.success(`Device model: ${res.data?.model}`);
-          } else {
-            toast.error(`Error: ${res.error}`);
-          }
-        } catch (error) {
-          console.error("Error calling get_device_model:", error);
-          toast.error(`Error: ${error}`);
-        }
-      },
+      onClick: () => getModel(),
     },
   },
 ];

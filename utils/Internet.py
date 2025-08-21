@@ -10,6 +10,7 @@ class Internet:
         
     def connect(self):
         import subprocess
+        import os
 
         wifi_profile = self.get_internet_profile()
 
@@ -21,6 +22,9 @@ class Internet:
             subprocess.run(["netsh", "wlan", "add", "profile", f"filename={profile_path}"], check=True)
             result = subprocess.run(["netsh", "wlan", "connect", f"name={self.settings['ssid']}"], capture_output=True, text=True)
             
+            if os.path.exists(profile_path):
+                os.remove(profile_path)
+
             if (result.returncode != 0):
                 raise("Failed to connect to Wi-Fi")
         except Exception as e:
