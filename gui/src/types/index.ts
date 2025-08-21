@@ -13,6 +13,16 @@ export type PyWebView = {
       message?: string;
       error?: string;
     }>;
+    install_remote_drivers: () => Promise<{
+      success: boolean;
+      message?: string;
+      error?: string;
+    }>;
+    install_local_drivers: () => Promise<{
+      success: boolean;
+      message?: string;
+      error?: string;
+    }>;
   };
 };
 

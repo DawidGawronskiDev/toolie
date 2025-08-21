@@ -1,13 +1,9 @@
+from utils.Settings import Settings
+
 class Internet:
     def __init__(self):
-        self.settings = self.get_settings()
+        self.settings = Settings().get_settings()["internet"]
 
-    def get_settings(self):
-        import json
-
-        with open("config/settings.json") as f:
-            return dict(json.load(f)["internet"])
-        
     def connect(self):
         import subprocess
         import os

@@ -1,4 +1,9 @@
-import { connectToInternet, getModel } from "@/lib/option-actions";
+import {
+  connectToInternet,
+  getModel,
+  installLocalDrivers,
+  installRemoteDrivers,
+} from "@/lib/option-actions";
 import type { Option } from "@/types";
 import {
   IconBrandWindows,
@@ -27,6 +32,7 @@ export const options: Option[] = [
     action: {
       icon: HardDrive,
       label: "Install Drivers",
+      onClick: () => installRemoteDrivers(),
     },
   },
   {
@@ -39,6 +45,7 @@ export const options: Option[] = [
     action: {
       icon: Wifi,
       label: "Install Local Drivers",
+      onClick: () => installLocalDrivers(),
     },
   },
   {

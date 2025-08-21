@@ -2,5 +2,8 @@
   "internet": {
     "ssid": "<SSID>",
     "password": "<PASSWORD>"
+  },
+  "drivers": {
+    "remote_drivers_path": "<REMOTE_DRIVERS_PATH>"
   }
 }
