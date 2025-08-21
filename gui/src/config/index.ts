@@ -19,6 +19,14 @@ export const options: Option[] = [
     },
   },
   {
+    title: "Install Local Drivers",
+    description: "Install drivers located on your pendrive.",
+    action: {
+      icon: Wifi,
+      label: "Install Local Drivers",
+    },
+  },
+  {
     title: "Connect to Internet",
     description: "Get access to the internet.",
     action: {
