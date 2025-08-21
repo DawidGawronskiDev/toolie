@@ -204,3 +204,6 @@ __marimo__/
 
 # Config
 config/settings.json
+
+# Custom
+wifi_profile.xml
