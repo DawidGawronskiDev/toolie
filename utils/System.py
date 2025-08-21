@@ -18,4 +18,8 @@ class System:
     
     def run_windows_update(self):
         import subprocess
-        subprocess.run(["powershell", "-Command", "Install-WindowsUpdate -AcceptAll -AutoReboot"], check=True)
+        result = subprocess.run(["powershell", "-command", "(New-Object -ComObject Microsoft.Update.AutoUpdate).DetectNow()"], check=True, text=True)
+        if result.returncode != 0:
+            raise subprocess.CalledProcessError(result.returncode, result.args)
+        else :
+            return "Windows Update initiated successfully."
