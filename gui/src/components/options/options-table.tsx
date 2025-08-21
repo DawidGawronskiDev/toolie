@@ -14,7 +14,7 @@ const OptionsTable = ({ options }: { options: Option[] }) => {
   const { isMobile } = useMobile();
 
   return (
-    <Table>
+    <Table className="bg-background/0 backdrop-blur-xs">
       <TableHeader className="*:font-bold *:last:text-right">
         <TableHead>Title</TableHead>
         {!isMobile && <TableHead>Description</TableHead>}

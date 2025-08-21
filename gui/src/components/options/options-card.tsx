@@ -15,7 +15,10 @@ const OptionsCard = ({
   ...props
 }: { option: Option } & HTMLAttributes<HTMLDivElement>) => {
   return (
-    <Card className="justify-between animate-appear opacity-0" {...props}>
+    <Card
+      className="justify-between animate-appear opacity-0 bg-card/0 backdrop-blur-sm"
+      {...props}
+    >
       <CardHeader>
         <CardTitle>{option.title}</CardTitle>
         <CardDescription>{option.description}</CardDescription>

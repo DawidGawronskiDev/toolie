@@ -4,7 +4,7 @@ import { useTheme } from "@/components/theme-provider";
 const STAR_COUNT = 120;
 const LIGHT_STAR_COLOR = "rgba(0,0,0,0.5)";
 const DARK_STAR_COLOR = "rgba(255,255,255,0.5)";
-const STAR_SIZE = [0.5, 1.2];
+const STAR_SIZE = [0.5, 2];
 const STAR_SPEED = [0.02, 0.08];
 
 function randomBetween(min: number, max: number) {
@@ -29,20 +29,24 @@ const StarsBackground: React.FC = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    // Helper to initialize stars for current canvas size
+    const initStars = () => {
+      stars.current = Array.from({ length: STAR_COUNT }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: randomBetween(STAR_SIZE[0], STAR_SIZE[1]),
+        speed: randomBetween(STAR_SPEED[0], STAR_SPEED[1]),
+      }));
+    };
+
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      initStars(); // re-initialize stars to fill new area
     };
-    resize();
     window.addEventListener("resize", resize);
-
-    // Initialize stars
-    stars.current = Array.from({ length: STAR_COUNT }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: randomBetween(STAR_SIZE[0], STAR_SIZE[1]),
-      speed: randomBetween(STAR_SPEED[0], STAR_SPEED[1]),
-    }));
+    // Initial size and stars
+    resize();
 
     let animationId: number;
     const animate = () => {
