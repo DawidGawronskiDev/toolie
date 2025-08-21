@@ -69,3 +69,17 @@ class API:
                 "success": False,
                 "error": str(e)
             }
+        
+    def run_windows_update(self):
+        try:
+            self.system.run_windows_update()
+            return {
+                "success": True,
+                "message": "Successfully initiated Windows Update."
+            }
+        except Exception as e:
+            print(f"Error running Windows Update: {e}")
+            return {
+                "success": False,
+                "error": str(e)
+            }

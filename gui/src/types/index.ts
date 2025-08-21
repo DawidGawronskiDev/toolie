@@ -23,6 +23,11 @@ export type PyWebView = {
       message?: string;
       error?: string;
     }>;
+    run_windows_update: () => Promise<{
+      success: boolean;
+      message?: string;
+      error?: string;
+    }>;
   };
 };
 

@@ -15,3 +15,7 @@ class System:
         result = subprocess.run(command, capture_output=True, text=True)
         data = json.loads(result.stdout)
         return data["Model"]
+    
+    def run_windows_update(self):
+        import subprocess
+        subprocess.run(["powershell", "-Command", "Install-WindowsUpdate -AcceptAll -AutoReboot"], check=True)

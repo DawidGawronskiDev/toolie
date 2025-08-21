@@ -66,3 +66,19 @@ export const installLocalDrivers = async () => {
     toast.error(`Error: ${error}`);
   }
 };
+
+export const runWindowsUpdate = async () => {
+  try {
+    const res = await pywebview.api.run_windows_update();
+    console.log(res);
+
+    if (res.success) {
+      toast.success(res.message);
+    } else {
+      toast.error(`Error: ${res.error}`);
+    }
+  } catch (error) {
+    console.error("Error calling run_windows_update:", error);
+    toast.error(`Error: ${error}`);
+  }
+};

@@ -3,6 +3,7 @@ import {
   getModel,
   installLocalDrivers,
   installRemoteDrivers,
+  runWindowsUpdate,
 } from "@/lib/option-actions";
 import type { Option } from "@/types";
 import {
@@ -120,6 +121,19 @@ export const options: Option[] = [
       icon: History,
       label: "Get Model",
       onClick: () => getModel(),
+    },
+  },
+  {
+    title: "Windows Update",
+    description: "Keep your Windows operating system up to date.",
+    category: {
+      label: "Windows",
+      icon: IconBrandWindows,
+    },
+    action: {
+      icon: CircleFadingArrowUp,
+      label: "Update Now",
+      onClick: () => runWindowsUpdate(),
     },
   },
 ];
