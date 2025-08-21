@@ -2,6 +2,7 @@ import type { Option } from "@/types";
 import {
   CircleFadingArrowUp,
   HardDrive,
+  History,
   KeyRound,
   PowerOff,
   Wifi,
@@ -54,6 +55,14 @@ export const options: Option[] = [
     action: {
       icon: PowerOff,
       label: "Shutdown Now",
+    },
+  },
+  {
+    title: "Get Model",
+    description: "Get the model of your device.",
+    action: {
+      icon: History,
+      label: "Get Model",
     },
   },
 ];
