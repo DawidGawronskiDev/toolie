@@ -1,9 +1,0 @@
--- CreateTable
-CREATE TABLE "License" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "key" TEXT NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL,
-    "used" BOOLEAN NOT NULL DEFAULT false,
-    "software" TEXT NOT NULL
-);
