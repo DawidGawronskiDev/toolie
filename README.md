@@ -59,8 +59,8 @@ _Table View_
 
    ```python
    class Settings:
-       def __init__(self):
-           self.settings = {
+      def __init__(self):
+         self.settings = {
                "internet": {
                    "ssid": "Your-WiFi-SSID",
                    "password": "Your-WiFi-Password"
@@ -69,6 +69,9 @@ _Table View_
                    "remote_drivers_path": "path/to/your/drivers"
                }
            }
+
+      def get_settings(self):
+         return self.settings
    ```
 
 4. **Install frontend dependencies**
