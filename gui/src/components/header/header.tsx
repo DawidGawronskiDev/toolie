@@ -1,10 +1,11 @@
 import { HeaderActions } from "@/components/header/header-actions";
+import { Logo } from "@/components/logo";
 
 const Header = () => {
   return (
     <header className="container py-4">
       <div className="w-full flex items-center justify-between">
-        <h1>Toolie</h1>
+        <Logo />
         <HeaderActions />
       </div>
     </header>
