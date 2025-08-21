@@ -18,6 +18,8 @@ import {
   HardDrive,
   History,
   KeyRound,
+  MonitorDown,
+  MoveUp,
   PowerOff,
   Wifi,
 } from "lucide-react";
@@ -44,7 +46,7 @@ export const options: Option[] = [
       icon: IconSettings,
     },
     action: {
-      icon: Wifi,
+      icon: MonitorDown,
       label: "Install Local Drivers",
       onClick: () => installLocalDrivers(),
     },
@@ -70,7 +72,7 @@ export const options: Option[] = [
       icon: IconBrandWindows,
     },
     action: {
-      icon: CircleFadingArrowUp,
+      icon: MoveUp,
       label: "Upgrade Now",
     },
   },
