@@ -51,3 +51,6 @@ class API:
         
     def upgrade_windows_to_pro(self):
         return self.system.upgrade_windows_to_pro()
+
+    def shutdown(self):
+        return self.system.shutdown()
