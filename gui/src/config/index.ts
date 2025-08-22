@@ -2,7 +2,7 @@ import {
   connectToInternet,
   getModel,
   installLocalDrivers,
-  installRemoteDrivers,
+  // installRemoteDrivers,
   runWindowsUpdate,
   upgradeWindowsToPro,
 } from "@/lib/option-actions";
@@ -16,7 +16,7 @@ import {
 } from "@tabler/icons-react";
 import {
   CircleFadingArrowUp,
-  HardDrive,
+  // HardDrive,
   History,
   KeyRound,
   MonitorDown,
@@ -26,19 +26,19 @@ import {
 } from "lucide-react";
 
 export const options: Option[] = [
-  {
-    title: "Install Drivers",
-    description: "Install drivers and ensure proper functionality.",
-    category: {
-      label: "Drivers",
-      icon: IconSettings,
-    },
-    action: {
-      icon: HardDrive,
-      label: "Install Drivers",
-      onClick: () => installRemoteDrivers(),
-    },
-  },
+  // {
+  //   title: "Install Drivers",
+  //   description: "Install drivers and ensure proper functionality.",
+  //   category: {
+  //     label: "Drivers",
+  //     icon: IconSettings,
+  //   },
+  //   action: {
+  //     icon: HardDrive,
+  //     label: "Install Drivers",
+  //     onClick: () => installRemoteDrivers(),
+  //   },
+  // },
   {
     title: "Install Local Drivers",
     description: "Install drivers located on your pendrive.",

@@ -34,21 +34,21 @@ export const getModel = async () => {
   }
 };
 
-export const installRemoteDrivers = async () => {
-  try {
-    const res = await pywebview.api.install_remote_drivers();
-    console.log(res);
+// export const installRemoteDrivers = async () => {
+//   try {
+//     const res = await pywebview.api.install_remote_drivers();
+//     console.log(res);
 
-    if (res.success) {
-      toast.success(res.message);
-    } else {
-      toast.error(`Error: ${res.error}`);
-    }
-  } catch (error) {
-    console.error("Error calling install_remote_drivers:", error);
-    toast.error(`Error: ${error}`);
-  }
-};
+//     if (res.success) {
+//       toast.success(res.message);
+//     } else {
+//       toast.error(`Error: ${res.error}`);
+//     }
+//   } catch (error) {
+//     console.error("Error calling install_remote_drivers:", error);
+//     toast.error(`Error: ${error}`);
+//   }
+// };
 
 export const installLocalDrivers = async () => {
   try {

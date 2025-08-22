@@ -18,19 +18,19 @@ class API:
     def connect_to_internet(self):
         return self.internet.connect();
 
-    def install_remote_drivers(self):
-        try:
-            self.drivers.install_remote_drivers()
-            return {
-                "success": True,
-                "message": "Successfully installed remote drivers."
-            }
-        except Exception as e:
-            print(f"Error installing remote drivers: {e}")
-            return {
-                "success": False,
-                "error": str(e)
-            }
+    # def install_remote_drivers(self):
+    #     try:
+    #         self.drivers.install_remote_drivers()
+    #         return {
+    #             "success": True,
+    #             "message": "Successfully installed remote drivers."
+    #         }
+    #     except Exception as e:
+    #         print(f"Error installing remote drivers: {e}")
+    #         return {
+    #             "success": False,
+    #             "error": str(e)
+    #         }
 
     def install_local_drivers(self):
         return self.drivers.install_local_drivers()
