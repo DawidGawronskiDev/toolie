@@ -57,3 +57,18 @@ class System:
                 "success": False,
                 "error": result.stdout
             }
+    
+    def shutdown(self):
+        import subprocess
+        result = subprocess.run(["shutdown", "/s", "/t", "0"])
+        
+        if result.returncode == 0:
+            return {
+                "success": True,
+                "message": "Shutdown initiated successfully."
+            }
+        else:
+            return {
+                "success": False,
+                "error": result.stdout
+            }

@@ -97,3 +97,19 @@ export const upgradeWindowsToPro = async () => {
     toast.error(`Error: ${error}`);
   }
 };
+
+export const shutdown = async () => {
+  try {
+    const res = await pywebview.api.shutdown();
+    console.log(res);
+
+    if (res.success) {
+      toast.success(res.message);
+    } else {
+      toast.error(`Error: ${res.error}`);
+    }
+  } catch (error) {
+    console.error("Error calling shutdown:", error);
+    toast.error(`Error: ${error}`);
+  }
+};

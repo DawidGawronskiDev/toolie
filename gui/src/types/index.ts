@@ -34,6 +34,11 @@ export type PyWebView = {
       message?: string;
       error?: string;
     }>;
+    shutdown: () => Promise<{
+      success: boolean;
+      message?: string;
+      error?: string;
+    }>;
   };
 };
 

@@ -4,6 +4,7 @@ import {
   installLocalDrivers,
   // installRemoteDrivers,
   runWindowsUpdate,
+  shutdown,
   upgradeWindowsToPro,
 } from "@/lib/option-actions";
 import type { Option } from "@/types";
@@ -112,6 +113,7 @@ export const options: Option[] = [
     action: {
       icon: PowerOff,
       label: "Shutdown Now",
+      onClick: () => shutdown(),
     },
   },
   {
