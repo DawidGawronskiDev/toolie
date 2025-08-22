@@ -22,7 +22,6 @@ export const connectToInternet = async () => {
 export const getModel = async () => {
   try {
     const res = await pywebview.api.get_device_model();
-    console.log(res);
 
     if (res.success) {
       toast.success(`Device model: ${res.data?.model}`);
@@ -79,6 +78,22 @@ export const runWindowsUpdate = async () => {
     }
   } catch (error) {
     console.error("Error calling run_windows_update:", error);
+    toast.error(`Error: ${error}`);
+  }
+};
+
+export const upgradeWindowsToPro = async () => {
+  try {
+    const res = await pywebview.api.upgrade_windows_to_pro();
+    console.log(res);
+
+    if (res.success) {
+      toast.success(res.message);
+    } else {
+      toast.error(`Error: ${res.error}`);
+    }
+  } catch (error) {
+    console.error("Error calling upgrade_windows_to_pro:", error);
     toast.error(`Error: ${error}`);
   }
 };

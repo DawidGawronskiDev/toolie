@@ -3,6 +3,7 @@ export type PyWebView = {
     close_window: () => void;
     get_device_model: () => Promise<{
       success: boolean;
+      message?: string;
       data?: {
         model: string;
       };
@@ -24,6 +25,11 @@ export type PyWebView = {
       error?: string;
     }>;
     run_windows_update: () => Promise<{
+      success: boolean;
+      message?: string;
+      error?: string;
+    }>;
+    upgrade_windows_to_pro: () => Promise<{
       success: boolean;
       message?: string;
       error?: string;

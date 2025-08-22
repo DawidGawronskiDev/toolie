@@ -13,35 +13,11 @@ class API:
         webview.active_window().destroy()
 
     def get_device_model(self):
-        try:
-            device_model = self.system.get_model()
-            return {
-                "success": True,
-                "data": {
-                    "model": device_model
-                }
-            }
-        except Exception as e:
-            print(f"Error getting device model: {e}")
-            return {
-                "success": False,
-                "error": str(e)
-            }
+        return self.system.get_model()
         
     def connect_to_internet(self):
-        try:
-            self.internet.connect()
-            return {
-                "success": True,
-                "message": f"Successfully connected to Wi-Fi: {self.internet.settings['ssid']}"
-            }
-        except Exception as e:
-            print(f"Error connecting to internet: {e}")
-            return {
-                "success": False,
-                "error": str(e)
-            }
-        
+        return self.internet.connect();
+
     def install_remote_drivers(self):
         try:
             self.drivers.install_remote_drivers()
@@ -57,18 +33,7 @@ class API:
             }
 
     def install_local_drivers(self):
-        try:
-            self.drivers.install_local_drivers()
-            return {
-                "success": True,
-                "message": "Successfully installed local drivers."
-            }
-        except Exception as e:
-            print(f"Error installing local drivers: {e}")
-            return {
-                "success": False,
-                "error": str(e)
-            }
+        return self.drivers.install_local_drivers()
         
     def run_windows_update(self):
         try:
@@ -83,3 +48,6 @@ class API:
                 "success": False,
                 "error": str(e)
             }
+        
+    def upgrade_windows_to_pro(self):
+        return self.system.upgrade_windows_to_pro()

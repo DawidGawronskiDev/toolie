@@ -4,6 +4,7 @@ import {
   installLocalDrivers,
   installRemoteDrivers,
   runWindowsUpdate,
+  upgradeWindowsToPro,
 } from "@/lib/option-actions";
 import type { Option } from "@/types";
 import {
@@ -74,6 +75,7 @@ export const options: Option[] = [
     action: {
       icon: MoveUp,
       label: "Upgrade Now",
+      onClick: () => upgradeWindowsToPro(),
     },
   },
   {
